@@ -13,24 +13,33 @@ Create an object of the Rectangle class and test all the methods."""
 
 
 class Rectangle:
+    """A class to represent a rectangle with width and height."""
     def __init__(rec, width, height):
         rec.width = width
         rec.height = height
 
+
     def area(rec):
+        """Calculate the area of the rectangle."""
         return rec.width * rec.height
 
+
     def perimeter(rec):
+        """Calculate the perimeter of the rectangle."""
         return 2 * (rec.width + rec.height)
 
+
     def is_square(rec):
+        """Check if the rectangle is a square."""
         return rec.width == rec.height
 
+
     def resize(rec, new_width, new_height):
+        """Resize the rectangle to new width and height."""
         rec.width = new_width
         rec.height = new_height
 
-#TEST
+
 if __name__ == "__main__":
     rect = Rectangle(2, 5)
 
@@ -39,7 +48,6 @@ if __name__ == "__main__":
     print(f"Is square? {rect.is_square()}")
 
     print("========Second========")
-    #realize second object
     rect.resize(2, 2)
     print(f"New area: {rect.area()}")
     print(f"New perimeter: {rect.perimeter()}")
